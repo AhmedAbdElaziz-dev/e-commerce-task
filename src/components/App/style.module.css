@@ -1,0 +1,13 @@
+
+.cart {
+  color: "white";
+  background-color: black;
+  display: inline-block;
+  padding: 0.7rem 2rem 0.7rem 1rem;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: fixed;
+  top: 350px;
+  right: 0px;
+  z-index: 1;
+}

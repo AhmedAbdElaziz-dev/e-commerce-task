@@ -7,13 +7,19 @@ const Card = ({ card, history, addToCart, shoppingCartList }) => {
   const { image, title, description, price } = card;
   const onAddToCart = (e) => {
     e.preventDefault();
+    if (!e)  e = window.event;
+    e.cancelBubble = true;
+    if (e.stopPropagation) e.stopPropagation();
     const element = shoppingCartList.find((element) => element.id === card.id);
     if (!element) addToCart(card);
   };
   return (
     <div
       className="col-md-4"
-      // onClick={() => history.push(`/details/${card.id}`)}
+      onClick={(e) => {
+        e.preventDefault();
+        history.push(`/details/${card.id}`);
+      }}
     >
       <div className="card mb-4 shadow-sm">
         <img
@@ -44,14 +50,17 @@ const Card = ({ card, history, addToCart, shoppingCartList }) => {
     </div>
   );
 };
+
 const mapDispatchToPorps = (dispatch) => {
   return {
     addToCart: (item) => dispatch(addToCart(item)),
   };
 };
+
 const mapStateToPorps = (state) => {
   return {
     shoppingCartList: state.shoppingCartList,
   };
 };
+
 export default withRouter(connect(mapStateToPorps, mapDispatchToPorps)(Card));

@@ -11,7 +11,6 @@ import { getProducts } from "../../apis/product";
 export const getAllProducts = () => {
   return async (dispatch) => {
     const { data: products } = await getProducts();
-    console.log("data", products);
     dispatch(getAllProductsResult(products));
   };
 };

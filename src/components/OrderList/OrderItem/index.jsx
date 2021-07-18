@@ -1,8 +1,8 @@
 import * as classes from "./style.module.css";
 
-const OrderItem =({item:{quantity,price,totlePrice,image,title}})=>{
-    return(
-         <div className={classes.container}>
+const OrderItem = ({ item: { quantity, price, totlePrice, image, title } }) => {
+  return (
+    <div className={classes.container}>
       <div className="row">
         <div className="col-md-5">
           <img className="d-block w-100" src={image} alt={title}></img>
@@ -17,7 +17,7 @@ const OrderItem =({item:{quantity,price,totlePrice,image,title}})=>{
             <b>Price per Item :</b>
             {price}
           </p>
-          
+
           <p>
             <b>Totle Price :</b>
             {totlePrice}
@@ -25,6 +25,7 @@ const OrderItem =({item:{quantity,price,totlePrice,image,title}})=>{
         </div>
       </div>
     </div>
-    )
-}
-export default OrderItem
+  );
+};
+
+export default OrderItem;

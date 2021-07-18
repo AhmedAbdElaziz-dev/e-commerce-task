@@ -4,3 +4,12 @@
   background-color: green;
   border-radius: 50%;
 }
+
+.notification{
+  background-color:red;
+  padding: 0rem 0.3rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 50px;
+  top: 4px;
+}

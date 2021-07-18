@@ -4,8 +4,7 @@ import * as Yup from "yup";
 import { connect } from "react-redux";
 import { submitOrder } from "../../store/products/actions";
 
-const UserForm = ({submitOrder,history}) => {
-    console.log(("history",history));
+const UserForm = ({ submitOrder, history }) => {
   const schema = Yup.object({
     address: Yup.string().required("Required"),
     phoneNum: Yup.string().required("Required"),
@@ -18,8 +17,9 @@ const UserForm = ({submitOrder,history}) => {
       phoneNum: "",
     },
     onSubmit: () => {
-        submitOrder()
-        history.push("/")
+      submitOrder();
+      history.push("/");
+      alert("your Order Submitted successfully !")
     },
     validationSchema: schema,
   });
@@ -81,7 +81,7 @@ const UserForm = ({submitOrder,history}) => {
 
 const mapDispatchToProps = (disptach) => {
   return {
-    submitOrder:()=> disptach(submitOrder()),
+    submitOrder: () => disptach(submitOrder()),
   };
 };
 
