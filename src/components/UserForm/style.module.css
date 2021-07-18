@@ -1,0 +1,45 @@
+.input-label {
+  font-weight: bold;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  display: block;
+  width: 400px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #555;
+  border-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid rgb(207, 207, 207);
+  width: 600px;
+  margin: 3rem auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-button {
+  text-align: center;
+  color: blanchedalmond;
+  background-color: black;
+  width: 8rem;
+  margin: 1rem auto;
+  padding: 0.5rem 0rem;
+  border-radius: 20px;
+}
+
+.form-control{
+    margin-bottom: 20px;
+}
+.error{
+    color:red
+}

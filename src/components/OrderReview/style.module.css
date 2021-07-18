@@ -1,0 +1,15 @@
+.container {
+    width: 70%;
+    margin: 6rem auto;
+  }
+  
+  .order-button {
+    text-align: center;
+    color: blanchedalmond;
+    background-color: black;
+    width: 8rem;
+    margin: 1rem auto;
+    padding: 0.5rem 0rem;
+    border-radius: 20px;
+  }
+  
